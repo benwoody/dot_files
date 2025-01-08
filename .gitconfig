@@ -1,0 +1,37 @@
+[color]
+    ui = auto
+
+[alias]
+    st = status
+    co = commit
+    cs = commit -S
+    br = branch
+    ch = checkout
+    df = diff
+    dc = diff --cached
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[gpg]
+    program = gpg
+[commit]
+    gpgsign = true
+[rebase]
+    autosquash = true
+[core]
+    excludesfile = ~/.gitignore_global
+[mergetool "fugitive"]
+    cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+[mergetool]
+    prompt = false
+[merge]
+    tool = vimdiff
+[pull]
+    ff = only
+[init]
+    defaultBranch = main
+[push]
+    autoSetupRemote = true
+[include]
+    path = ~/.gitconfig-user
